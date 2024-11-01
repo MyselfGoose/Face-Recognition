@@ -16,20 +16,33 @@
     <div id="container">
       <form action="/upload" method="post">
         <div id="input-div">
-          <div class="mb-3 upload-card">
+
+          <!-- First Div -->
+          <div class="mb-3 upload-card"> 
+            <h4>Reference</h1>
+            <div id="first-input-container">
             <label for="formFile" class="form-label"
               >Upload an Image here</label
             >
-            <input class="form-control" type="file" name="image" id="first" />
+            <input class="form-control" type="file" name="image" id="reference-upload" onchange="storeFiles()" />
+            </div>
+            <div class="image-container reference-container"></div>
           </div>
+          
+          <!-- Seccond Div -->
           <div class="mb-3 upload-card">
+            <h4>Image to check</h4>
+            <div id="second-input-container">
             <label for="formFile" class="form-label"
               >Upload an Image here</label
             >
-            <input class="form-control" type="file" name="image" id="first" />
+            <input class="form-control" type="file" name="image" id="check-upload" onchange="storeFiles()" />
+            </div>
+            <div class="image-container check-container"></div>
           </div>
         </div>
 
+        <!-- Button Div -->
         <div id="button">
           <button class="btn btn-outline-secondary">Upload</button>
         </div>
@@ -41,5 +54,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/upload.js"></script>
   </body>
 </html>
