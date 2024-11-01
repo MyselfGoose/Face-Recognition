@@ -15,14 +15,21 @@
   <body>
     <div id="container">
       <form action="/upload" method="post">
-        <div class="mb-3 upload-card">
-          <label for="formFile" class="form-label">Upload an Image here</label>
-          <input class="form-control" type="file" name="image" id="first" />
+        <div id="input-div">
+          <div class="mb-3 upload-card">
+            <label for="formFile" class="form-label"
+              >Upload an Image here</label
+            >
+            <input class="form-control" type="file" name="image" id="first" />
+          </div>
+          <div class="mb-3 upload-card">
+            <label for="formFile" class="form-label"
+              >Upload an Image here</label
+            >
+            <input class="form-control" type="file" name="image" id="first" />
+          </div>
         </div>
-        <div class="mb-3 upload-card">
-          <label for="formFile" class="form-label">Upload an Image here</label>
-          <input class="form-control" type="file" name="image" id="first" />
-        </div>
+
         <div id="button">
           <button class="btn btn-outline-secondary">Upload</button>
         </div>

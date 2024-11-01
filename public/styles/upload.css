@@ -1,0 +1,15 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#input-div{
+  display: flex;
+  gap: 100px;
+}
+#button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
