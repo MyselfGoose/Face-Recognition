@@ -1,26 +1,33 @@
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
-h4{
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+h4 {
   text-align: center;
 }
-#input-div{
+#input-div {
   display: flex;
   gap: 100px;
 }
-#button{
+#button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.image-container{
-  max-height: 400px;
-  max-width: 200px;
+.image-container {
+  max-height: 600px;
+  max-width: 300px;
 }
-.hidden{
+.hidden {
   display: none;
 }

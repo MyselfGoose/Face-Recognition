@@ -14,7 +14,10 @@
   </head>
   <body>
     <div id="container">
-      <form action="/upload" method="post">
+      <h1>Face Recognition</h1>
+
+      <!-- Form starts here -->
+      <form action="/upload" method="post" enctype="multipart/form-data">
         <div id="input-div">
 
           <!-- First Div -->
@@ -24,7 +27,7 @@
             <label for="formFile" class="form-label"
               >Upload an Image here</label
             >
-            <input class="form-control" type="file" name="image" id="reference-upload" onchange="storeFiles()" />
+            <input class="form-control" type="file" name="first" id="reference-upload" onchange="storeFiles()" />
             </div>
             <div class="image-container reference-container"></div>
           </div>
@@ -36,7 +39,7 @@
             <label for="formFile" class="form-label"
               >Upload an Image here</label
             >
-            <input class="form-control" type="file" name="image" id="check-upload" onchange="storeFiles()" />
+            <input class="form-control" type="file" name="second" id="check-upload" onchange="storeFiles()" />
             </div>
             <div class="image-container check-container"></div>
           </div>

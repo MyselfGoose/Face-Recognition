@@ -1,21 +1,38 @@
-import express from "express"
+import express from "express";
 import bodyParser from "body-parser";
+import multer from "multer";
+import path from "path";
 
 const app = express();
 const port = 3000;
 
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended:true}));
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(port, () => {
   console.log(`Running on port ${port}`);
 });
 
-app.get('/', (req, res) => {
-  res.render('upload.ejs');
+app.get("/", (req, res) => {
+  res.render("upload.ejs");
 });
 
-app.post('/upload', (req, res) => {
-  res.send("YEET");
-  console.log(req.body);
-});
+app.post(
+  "/upload",
+  upload.fields([{ name: "first" }, { name: "second" }]),
+  (req, res) => {
+    // Convert file buffers to base64 strings for embedding directly in the HTML
+    const images = {
+      first: `data:${req.files["first"][0].mimetype};base64,${req.files[
+        "first"
+      ][0].buffer.toString("base64")}`,
+      second: `data:${req.files["second"][0].mimetype};base64,${req.files[
+        "second"
+      ][0].buffer.toString("base64")}`,
+    };
+    res.render("main.ejs", { faces: images });
+  }
+);
