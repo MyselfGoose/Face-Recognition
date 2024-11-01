@@ -6,9 +6,31 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>First person</h1>
-    <img src="<%= faces.first %>" alt="first-person" />
-    <h2>Second person</h2>
-    <img src="<%= faces.second%>" alt="Second-Person" />
+    <!-- Main Container -->
+    <div id="container">
+      <!-- First Div Starts here -->
+      <div id="image-to-check-div">
+        <!-- This is the heading Div -->
+        <div class="heading-div">
+          <h1>Image to check</h1>
+        </div>
+        <!-- This is the image container div -->
+        <div class="image-container">
+          <img src="<%= faces.second %>" alt="first-person" />
+        </div>
+      </div>
+
+      <!-- Second Div Starts here -->
+      <div id="reference-div">
+        <!-- This is the heading Div -->
+        <div class="heading-div">
+          <h1><%=faces.name %></h1>
+        </div>
+        <!-- This is the image container div -->
+        <div class="image-container">
+          <img src="<%= faces.first%>" alt="Second-Person" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

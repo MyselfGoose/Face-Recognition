@@ -25,6 +25,7 @@ app.post(
   upload.fields([{ name: "first" }, { name: "second" }]),
   (req, res) => {
     // Convert file buffers to base64 strings for embedding directly in the HTML
+    console.log(`Username: ${req.body["username"]}`);
     const images = {
       first: `data:${req.files["first"][0].mimetype};base64,${req.files[
         "first"
@@ -32,7 +33,9 @@ app.post(
       second: `data:${req.files["second"][0].mimetype};base64,${req.files[
         "second"
       ][0].buffer.toString("base64")}`,
+      name: req.body["username"],
     };
+
     res.render("main.ejs", { faces: images });
   }
 );

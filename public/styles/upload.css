@@ -19,7 +19,7 @@ h4 {
   display: flex;
   gap: 100px;
 }
-#button {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
