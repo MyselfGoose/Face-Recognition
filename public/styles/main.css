@@ -1,0 +1,25 @@
+ .image-container {
+   position: relative;
+   max-width: 600px;
+   max-height: 600px;
+ }
+ #check-image, #reference-image, #canvas {
+   width: 100%;
+   height: auto;
+ }
+ #canvas {
+   position: absolute;
+   top: 0;
+   left: 0;
+ }
+ #container{
+  display: flex;
+  gap: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ .heading-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
